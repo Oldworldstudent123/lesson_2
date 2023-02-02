@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* Объявите константу с целым числом числом и выведите ее в консоль в шестнадцатиричном и двочном виде.
+ВЫВОД В КОНСОЛЬ ОСУЩЕСТВИТЕ ПРИ ПОМОЩИ ШАБЛОННОЙ СТРОКИ, та что с `` кавычками и доларом ;)
+Используя prompt введите число как константу, затем выведите в консоль результаты операций + - * / на 2 над этим числом
+определити длинну строки введенной при помощи prompt и выведите длинну в консоль
+Округлите число 0.51000002 до двух знаков после запятой и прибавте к нему 2, результат выведете в консоль*/
+
+        const someNumber = 232;
+        console.log(`${someNumber.toString(16)}`);
+        console.log(`${someNumber.toString(2)}`);
+
+        const someResult = `${+prompt('write an integer', 2)}`;
+        console.log(`${someResult + 2}`);
+        console.log(`${someResult - 2}`);
+        console.log(`${someResult * 2}`);
+        console.log(`${someResult /2}`);
+        console.log(someResult.length)
+
+        let defineNumber =  0.51000002;
+        console.log(`${+defineNumber.toFixed(3) + 2}`);
+
+        /*дано:
+const str = 'the quick brown fox jumps over the lazy dogs back';
+const str_two = 'brown fox jumps'
+определите с какого символа строка str_two начинается в строке str
+преобразуте любую из этих строк к заглавным буквам, результат выведете в консоль*/
+
+        const str = 'the quick brown fox jumps over the lazy dogs back';
+        const str_two = 'brown fox jumps';
+
+        console.log(str.indexOf(str_two));
+        console.log(str.toUpperCase());
+
+        /*обявите переменные
+a = 1, b = 2, c = 3, d = 3
+сравните a c b, b c c, c c d и результаты между собой таким ображом чтобы получить true используя ИЛИ не используя НЕ
+сравните a c b, b c c, c c d и результаты между собой таким ображом чтобы получить true используя И не используя НЕ */
+        let a = 1;
+        let b = 2;
+        let c = 3;
+        let d = 3;
+
+        console.log ((a < c > b) || (b < c <= c) || (c <= c >= d)); 
+        console.log (((a < c) && (c > b)) && ((b < c) && (c == c)) && ((c == c) && (c == d)));
+    
+        /*сделайти простой пример можно в одну строку, демонстрирующий различая между == и ===*/
+        let demoStr = '2';
+        let demoNum = 2;
+        console.log (demoNum == demoStr);
+        console.log (demoNum === demoStr);
+
+        /*также продемонстрируйте работу оператора ??*/
+        let someHeight = false;
+        let someName = 0;
+        let someHairColor = 'Brown';
+        console.log( (someName ?? 'Dutch'), (someHeight ?? 100), (someHairColor ?? 'Black'));
+        console.log( (someName || 'Dutch'), (someHeight || 100), (someHairColor || 'Black'));
+    </script>
+</body>
+</html>
